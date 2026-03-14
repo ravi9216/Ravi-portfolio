@@ -6,18 +6,26 @@ type Project = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="border rounded-lg p-6 hover:shadow-lg">
-      <h3 className="text-xl font-semibold">{project.title}</h3>
-      <p className="text-gray-600 mt-2">{project.description}</p>
+    <div style={{
+      border: "1px solid #ddd",
+      padding: "20px",
+      borderRadius: "10px"
+    }}>
+
+      <h3 style={{ fontSize: "22px" }}>
+        {project.title}
+      </h3>
+
+      <p style={{ color: "gray" }}>
+        {project.description}
+      </p>
 
       {project.link && (
-        <a
-          href={project.link}
-          className="text-blue-600 mt-4 inline-block"
-        >
-          View Project
+        <a href={project.link}>
+          View Case Study →
         </a>
       )}
+
     </div>
   )
 }

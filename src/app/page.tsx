@@ -1,36 +1,53 @@
+import ProjectCard from "@/components/ProjectCard"
+
+const projects = [
+  {
+    title: "AI Meeting Agents Platform",
+    description:
+      "Built agent orchestration layer to automate meeting workflows, increasing engagement 25%.",
+    link: "#"
+  },
+  {
+    title: "Trade Credit AI Assistant",
+    description:
+      "Built RAG-powered support assistant handling 10K monthly queries.",
+    link: "#"
+  },
+  {
+    title: "Retail Order Allocation AI",
+    description:
+      "Optimized supply chain allocation across 200+ stores increasing revenue 15%.",
+    link: "#"
+  }
+]
+
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center h-[80vh]">
+    <main className="max-w-6xl mx-auto px-6 py-16">
 
-      <h1 className="text-6xl font-bold">
-        Ravi Kumar
-      </h1>
+      <section className="mb-16">
+        <h1 className="text-5xl font-bold mb-4">
+          Ravi Kumar
+        </h1>
 
-      <p className="mt-4 text-xl text-gray-600">
-        Product Manager | Product, Platform, and AI Strategy
-      </p>
+        <p className="text-xl text-gray-600 max-w-2xl">
+          Product Manager focused on AI platforms, fintech systems, and
+          enterprise workflow automation.
+        </p>
+      </section>
 
-      <p className="mt-6 max-w-xl text-center">
-        I build enterprise platforms powered by AI that is scalable across retail technology, fintech, and
-        enterprise software.
-      </p>
+      <section>
+        <h2 className="text-3xl font-semibold mb-8">
+          Featured Projects
+        </h2>
 
-      <div className="mt-8 flex gap-4">
-        <a
-          href="/projects"
-          className="px-6 py-3 bg-black text-white rounded-lg"
-        >
-          View Projects
-        </a>
+        <div className="grid md:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
+      </section>
 
-        <a
-          href="/contact"
-          className="px-6 py-3 border rounded-lg"
-        >
-          Contact
-        </a>
-      </div>
-
-    </section>
+    </main>
   )
 }
