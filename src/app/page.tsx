@@ -1,3 +1,8 @@
+import About from "@/app/about/page"
+import Experience from "@/app/experience/page"
+import Projects from "@/app/projects/page"
+import Blog from "@/app/blog/page"
+import Contact from "@/app/contact/page"
 import ProjectCard from "@/components/ProjectCard"
 
 const projects = [
@@ -23,26 +28,34 @@ const projects = [
 
 export default function Home() {
   return (
-    <main style={{ maxWidth: "1000px", margin: "auto", padding: "40px" }}>
-      
-      <h1 style={{ fontSize: "48px", marginBottom: "10px" }}>
-        Ravi Kumar
-      </h1>
+    <main>
 
-      <p style={{ fontSize: "20px", marginBottom: "40px", color: "gray" }}>
-        Product Manager specializing in AI platforms, fintech systems,
-        and enterprise automation.
-      </p>
+      <section id="home" style={{ padding: "80px 20px", textAlign: "center" }}>
+        <h1 style={{ fontSize: "48px" }}>Ravi Kumar</h1>
+        <p style={{ color: "gray", marginTop: "10px" }}>
+          Product Manager specializing in AI platforms, fintech systems, and enterprise automation.
+        </p>
+      </section>
 
-      <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>
-        Featured Projects
-      </h2>
+      <section id="about" style={{ padding: "80px 20px" }}>
+        <About />
+      </section>
 
-      <div style={{ display: "grid", gap: "20px" }}>
-        {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
-      </div>
+      <section id="experience" style={{ padding: "80px 20px" }}>
+        <Experience />
+      </section>
+
+      <section id="projects" style={{ padding: "80px 20px" }}>
+        <Projects />
+      </section>
+
+      <section id="blog" style={{ padding: "80px 20px" }}>
+        <Blog />
+      </section>
+
+      <section id="contact" style={{ padding: "80px 20px" }}>
+        <Contact />
+      </section>
 
     </main>
   )
