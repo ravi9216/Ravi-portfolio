@@ -1,6 +1,6 @@
 import "./globals.css"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
+import Navbar from "../Components/Navbar"
+import Footer from "../Components/Footer"
 import Link from "next/link"
 export const metadata = {
   title: "Ravi Kumar Portfolio",

@@ -1,61 +1,43 @@
-import About from "@/app/about/page"
-import Experience from "@/app/experience/page"
-import Projects from "@/app/projects/page"
-import Blog from "@/app/blog/page"
-import Contact from "@/app/contact/page"
-import ProjectCard from "@/components/ProjectCard"
-
-const projects = [
-  {
-    title: "AI Meeting Agent Platform",
-    description:
-      "Built an AI agent orchestration platform to automate meeting workflows and improve engagement.",
-    link: "#",
-  },
-  {
-    title: "Trade Credit AI Assistant",
-    description:
-      "Developed a RAG-powered AI assistant for trade credit support queries.",
-    link: "#",
-  },
-  {
-    title: "Retail Order Allocation AI",
-    description:
-      "Created an AI system to optimize inventory allocation across stores.",
-    link: "#",
-  },
-]
+import Hero from "@/components/sections/Hero"
+import ImpactBento from "@/components/sections/ImpactBento"
+import CaseStudyGallery from "@/components/case-study/CaseStudyGallery"
+import ProductThinking from "@/components/sections/ProductThinking"
+import TechnicalMap from "@/components/sections/TechnicalMap"
+import ProductTeardowns from "@/components/sections/ProductTeardowns"
+import AboutSection from "@/components/sections/AboutSection"
+import ResumeSection from "@/components/sections/ResumeSection"
+import ContactSection from "@/components/sections/ContactSection"
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col gap-32">
 
-      <section id="home" style={{ padding: "80px 20px", textAlign: "center" }}>
-        <h1 style={{ fontSize: "48px" }}>Ravi Kumar</h1>
-        <p style={{ color: "gray", marginTop: "10px" }}>
-          Product Manager specializing in AI platforms, fintech systems, and enterprise automation.
-        </p>
-      </section>
+      {/* HERO */}
+      <Hero />
 
-      <section id="about" style={{ padding: "80px 20px" }}>
-        <About />
-      </section>
+      {/* KEY IMPACT BENTO GRID */}
+      <ImpactBento />
 
-      <section id="experience" style={{ padding: "80px 20px" }}>
-        <Experience />
-      </section>
+      {/* FEATURED CASE STUDIES */}
+      <CaseStudyGallery />
 
-      <section id="projects" style={{ padding: "80px 20px" }}>
-        <Projects />
-      </section>
+      {/* PRODUCT THINKING */}
+      <ProductThinking />
 
-      <section id="blog" style={{ padding: "80px 20px" }}>
-        <Blog />
-      </section>
+      {/* TECHNICAL PRODUCT WORK */}
+      <TechnicalMap />
 
-      <section id="contact" style={{ padding: "80px 20px" }}>
-        <Contact />
-      </section>
+      {/* PRODUCT TEARDOWNS */}
+      <ProductTeardowns />
+
+      {/* ABOUT */}
+      <AboutSection />
+
+      {/* RESUME */}
+      <ResumeSection />
+
+      {/* CONTACT */}
+      <ContactSection />
 
     </main>
   )
