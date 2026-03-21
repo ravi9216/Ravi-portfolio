@@ -42,7 +42,7 @@ const fadeUp = (delay = 0): Variants => ({
 const TAGS = [
   "Platform & Ecosystem Strategy",
   "AI Productization & Intelligent Systems",
-  "Customer-Centric Growth & PMF",
+  "Customer-Centric Growth, Product Craft & PMF",
   "Strategic Execution & Scaled"
 ]
 
