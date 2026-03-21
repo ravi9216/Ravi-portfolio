@@ -1,54 +1,98 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { memo } from "react"
 
-type NodeProps = {
+interface SystemNodeProps {
   label: string
   x: number
   y: number
-  active: boolean
-  onHover: () => void
-  onLeave: () => void
+  active?: boolean
+  onHover?: () => void
+  onLeave?: () => void
+  icon?: string
+  textClass?: string
 }
 
-export default function SystemNode({
+/**
+ * SystemNode
+ * Reusable SVG node for architecture maps
+ * - Supports hover + active states
+ * - Includes pulse animation + icon
+ * - Optimized for performance via memo
+ */
+function SystemNode({
   label,
   x,
   y,
-  active,
+  active = false,
   onHover,
-  onLeave
-}: NodeProps) {
-
+  onLeave,
+  icon,
+  textClass = "text-[11px] md:text-xs"
+}: SystemNodeProps) {
   return (
-
-    <motion.g
+    <g
+      transform={`translate(${x}, ${y})`}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
-      initial={{ scale: 0.9 }}
-      animate={{ scale: active ? 1.1 : 1 }}
-      transition={{ duration: 0.25 }}
+      role="button"
+      aria-label={label}
+      className="cursor-pointer focus:outline-none"
     >
+      {/* ---------------- Glow Pulse (Active State) ---------------- */}
+      {active && (
+        <motion.circle
+          r="24"
+          className="fill-indigo-500/20"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1.4, opacity: 0.35 }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.6,
+            ease: "easeOut"
+          }}
+        />
+      )}
 
-      <circle
-        cx={x}
-        cy={y}
-        r="12"
-        className={`${
-          active ? "fill-indigo-400" : "fill-white"
-        }`}
+      {/* ---------------- Core Node ---------------- */}
+      <motion.circle
+        r="14"
+        className={active ? "fill-indigo-500" : "fill-zinc-700"}
+        whileHover={{ scale: 1.12 }}
+        animate={{
+          scale: active ? 1.08 : 1
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 220,
+          damping: 18
+        }}
       />
 
+      {/* ---------------- Icon ---------------- */}
+      {icon && (
+        <text
+          textAnchor="middle"
+          y="4"
+          className="select-none text-[11px]"
+          pointerEvents="none"
+        >
+          {icon}
+        </text>
+      )}
+
+      {/* ---------------- Label ---------------- */}
       <text
-        x={x}
-        y={y + 28}
         textAnchor="middle"
-        className="fill-white text-xs tracking-tight"
+        y="34"
+        className={`fill-white leading-tight ${textClass}`}
+        pointerEvents="none"
       >
         {label}
       </text>
-
-    </motion.g>
-
+    </g>
   )
 }
+
+export default memo(SystemNode)
