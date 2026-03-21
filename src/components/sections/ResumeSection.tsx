@@ -25,7 +25,7 @@ export default function ResumeSection() {
           </p>
 
           <a
-            href="/resume.pdf"
+            href="/Ravi-kumar-PM.pdf"
             download
             className="inline-block px-6 py-3 rounded-lg bg-indigo-500 text-white hover:shadow-[0_0_20px_rgba(99,102,241,0.6)] transition"
           >

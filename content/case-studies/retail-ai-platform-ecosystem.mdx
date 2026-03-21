@@ -1,0 +1,324 @@
+---
+title: Case Study
+description: Building the Real-Time AI Decisioning Backbone for Retail
+---
+
+## Building the Real-Time AI Decisioning Backbone for Retail
+
+Problem
+
+The retail allocation ecosystem was constrained by three structural failures:
+
+Batch-Based Systems → Decisions lagged demand signals, leading to missed revenue and overstock
+
+Fragmented Data Pipelines → Merchandising, pricing, and supply chain operated on inconsistent datasets
+
+Misaligned Incentives →
+
+Merchandising optimized for revenue
+
+Supply chain optimized for cost + efficiency
+
+⚠️ Core Tension:
+Improving model accuracy increased latency—making outputs operationally unusable.
+
+Customer Insights
+1. Speed > Perfection in Decisioning
+
+Operators consistently overrode “optimal” recommendations.
+
+Insight: A slightly less accurate decision delivered instantly outperformed a perfect one delivered late.
+
+2. Trust is the Bottleneck in AI Adoption
+
+Black-box outputs created resistance across teams.
+
+Merchants needed control + explainability
+
+Supply chain required predictability
+
+3. Fragmentation = Lost Leverage
+
+Each team built its own tools:
+
+Redundant pipelines
+
+Inconsistent logic
+
+No shared learning across systems
+
+Insight: The problem wasn’t models—it was lack of a shared decisioning platform
+
+Product Strategy
+🔗 Platform & Ecosystem Strategy
+
+Philosophy: Move from features → platform primitives that compound value
+
+1. Inversion Thinking → Define Core Primitives
+
+Instead of building allocation features:
+
+Built decisioning APIs
+
+Standardized data contracts
+
+Created a shared inference layer
+
+✅ Result: Reuse across 4+ teams (pricing, demand, fulfillment)
+
+2. Flywheel Mechanics → Data → Decisions → Learning
+More Decisions → More Data → Better Models → Better Decisions → Higher Adoption
+
+Every allocation improved future predictions
+
+Established a self-reinforcing system across orgs
+
+3. Ecosystem Leverage → Build What Others Depend On
+
+Shifted from team-specific tools → shared platform
+
+Made platform the default dependency layer
+
+✅ Outcome: Platform became an organizational force multiplier
+
+AI Productization (Probability → Reliability)
+
+Philosophy: AI is probabilistic—but products must feel deterministic
+
+1. Trust Over Accuracy
+
+Replaced pure ML outputs with hybrid decision systems
+
+Combined:
+
+Model predictions
+
+Business rules
+
+Operational constraints
+
+✅ Increased adoption across merchant workflows
+
+2. First-Principles AI Design
+
+Introduced interpretable features + auditability layers
+
+Enabled users to:
+
+Understand recommendations
+
+Override when needed
+
+3. Workflow-Native AI
+
+Embedded decisioning into:
+
+Allocation workflows
+
+Pricing systems
+
+Supply chain tools
+
+✅ AI became part of daily operations, not a separate system
+
+Strategic Execution & Scale
+
+Philosophy: Scaling = managing constraints, not adding features
+
+1. Constraint-Driven Tradeoffs
+
+Introduced tiered decisioning architecture:
+
+Real-time layer → fast, approximate decisions
+
+Batch layer → deeper optimization
+
+✅ Balanced latency vs accuracy
+
+2. API-First Re-Architecture
+
+Decomposed monolith into microservices
+
+Introduced:
+
+Self-serve APIs
+
+Modular services
+
+✅ Reduced onboarding friction + enabled rapid scaling
+
+3. Influence Without Authority
+
+Resolved org-level conflict:
+
+Aligned merchandising + supply chain on shared KPIs
+
+Positioned platform as:
+
+Revenue driver
+
+Cost optimizer
+
+✅ Drove adoption across competing stakeholders
+
+Tech Architecture
+🏗️ System Evolution
+BEFORE:
+Batch Pipelines → Siloed Systems → Delayed Decisions → Low Trust
+
+AFTER:
+Real-Time Decisioning Platform
+   ├── Unified Data Layer
+   ├── Decisioning APIs
+   ├── ML Inference Layer
+   ├── Tiered Decision Engine
+   └── Feedback Loop System
+⚙️ Core Components
+
+Unified Data Platform → Real-time ingestion across systems
+
+Decisioning APIs → Reusable across teams
+
+ML Inference Layer → Scalable model deployment
+
+Tiered Decision Engine → Latency vs accuracy optimization
+
+Feedback Loops → Continuous model + system improvement
+
+Roadmap & Prioritization
+🧠 Inversion-Led Roadmap
+
+Stabilize Data Layer
+
+Consolidate fragmented pipelines
+
+Standardize inputs
+
+Build Core Platform Primitives
+
+APIs
+
+Decisioning engine
+
+Shared models
+
+Introduce Real-Time Layer
+
+Enable low-latency decisions
+
+Integrate with workflows
+
+Scale Across Teams
+
+Expand use cases
+
+Drive cross-org adoption
+
+⚖️ Key Tradeoff
+
+Avoided “perfect system design” upfront → prioritized incremental adoption
+
+Launch & Execution
+🚀 Rollout Strategy
+
+Phased deployment across:
+
+200+ retail locations
+
+Multiple product teams
+
+🔄 Feedback Loops
+
+Captured:
+
+Decision outcomes
+
+User overrides
+
+Model performance
+
+Fed directly into:
+
+Model retraining
+
+Product iteration
+
+🤝 Cross-Functional Alignment
+
+Weekly alignment across:
+
+Product
+
+Data Science
+
+Operations
+
+Unified around:
+
+Shared metrics
+
+Platform adoption goals
+
+Impact Metrics
+📈 Business Impact
+
++15% Revenue Growth across 200+ locations
+
+Influenced multi-billion-dollar inventory flows
+
+⚙️ System Impact
+
+1.5x Decision Throughput
+
+40% Infrastructure Cost Reduction
+
+80% System Resilience Improvement
+
+🔗 Platform Impact
+
+Adopted across 4+ teams
+
+Standardized decisioning across:
+
+Merchandising
+
+Pricing
+
+Supply chain
+
+Lessons Learned
+1. Platforms Create Leverage, Not Features
+
+The biggest unlock wasn’t better models—it was shared infrastructure
+
+2. AI Adoption is a Product Problem
+
+Accuracy didn’t drive adoption—trust, speed, and usability did
+
+3. Constraint-Driven Thinking Wins at Scale
+
+Solving for:
+
+latency
+
+org alignment
+
+reliability
+
+→ mattered more than feature depth
+
+4. Ecosystems Compound Value
+
+By turning systems into shared dependencies, every improvement scaled across the organization
+
+💡 Final Takeaway
+
+This was not an ML project—it was a platform transformation:
+
+From batch → real-time
+
+From siloed tools → shared ecosystem
+
+From models → decision systems
+
+Built not just a product—but the decisioning backbone of the organization

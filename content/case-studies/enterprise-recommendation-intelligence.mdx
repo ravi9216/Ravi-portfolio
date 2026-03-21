@@ -1,0 +1,407 @@
+---
+title: Case Study
+description: This is a description
+---
+
+## Architecting Quote-to-Order into a Real-Time Recommendation System
+
+Transformed a legacy, low-trust quote-to-order system into a real-time recommendation platform, reducing decision time by 50%, increasing conversion by 21%, and cutting onboarding costs by 80% through API-first architecture, hybrid AI models, and a reusable experimentation framework.
+
+Problem
+
+The quote-to-order system represented a critical revenue bottleneck:
+
+Batch Pricing Logic → Delayed decision-making in high-velocity sales cycles
+
+Manual XML Integrations → 6-month onboarding cycles limiting scalability
+
+Low Trust in Recommendations → Sales teams overrode outputs >60% of the time
+
+⚠️ Core Platform Gap:
+The system lacked a real-time, trustworthy decisioning layer, preventing scale across pricing, quoting, and sales workflows.
+
+This wasn’t a pricing problem—it was a decisioning architecture + trust problem
+
+Customer Insights
+1. Override Behavior = Broken Trust Signal
+
+Behavioral data showed:
+
+Sales reps consistently ignored recommendations
+
+Manual adjustments were the norm
+
+Insight: Adoption failure was not due to model accuracy—but lack of explainability and control
+
+2. Latency Killed Conversion
+
+Friction logs revealed:
+
+Delayed pricing → lost deals
+
+Static quotes → poor responsiveness to customer context
+
+Insight: In sales workflows, speed is a competitive advantage
+
+3. Integration Friction Blocked Growth
+
+XML-based onboarding required heavy engineering effort
+
+Each new client → months of setup
+
+Insight: Growth was constrained by integration complexity, not demand
+
+Product Strategy
+🧠 North Star
+
+Build a Real-Time Recommendation Platform that is:
+
+Trusted by sales
+
+Scalable across workflows
+
+Extensible via APIs
+
+🔗 Platform & Ecosystem Strategy
+1. Inversion Thinking → Define Decisioning Primitives
+
+Instead of building quoting features:
+
+Created:
+
+Recommendation APIs
+
+Pricing decision engine
+
+Experimentation framework
+
+✅ Enabled reuse across:
+
+Pricing
+
+Sales
+
+Deal configuration
+
+Forecasting
+
+2. Flywheel Mechanics → Usage → Learning → Better Recommendations
+More Usage → More Data → Better Recommendations → Higher Trust → More Usage
+
+Every interaction improved future outputs
+
+Created a self-reinforcing system of adoption + learning
+
+3. Ecosystem Leverage
+
+Platform became a dependency layer across teams
+
+Eliminated redundant pricing logic
+
+✅ Shifted from tool → organizational infrastructure
+
+AI Productization (Probability → Reliability)
+
+Philosophy: AI is probabilistic—but user experience must feel deterministic
+
+1. Trust Over Accuracy (Critical Pivot)
+
+Initial approach:
+
+Pure ML recommendations → high accuracy, low adoption
+
+Pivot:
+
+Introduced hybrid model:
+
+ML predictions
+
+Rule-based constraints
+
+Sales overrides
+
+✅ Result:
+
+Increased adoption
+
+Improved conversion + CSAT
+
+2. First-Principles AI Design
+
+Built:
+
+Explainable recommendations
+
+Confidence scoring
+
+Transparent inputs
+
+Insight: Users trusted systems they could understand and influence
+
+3. Workflow-Native AI
+
+Embedded recommendations directly into:
+
+Quote creation flows
+
+Pricing decisions
+
+Deal negotiation workflows
+
+Captured:
+
+Overrides
+
+User behavior
+
+Outcomes
+
+→ fed into continuous improvement loops
+
+Tech Architecture
+🏗️ System Evolution
+BEFORE:
+Batch Pricing Engine → XML Integrations → Manual Overrides → Low Trust
+
+AFTER:
+Real-Time Recommendation Platform
+   ├── API Gateway (Self-Serve Integrations)
+   ├── Recommendation Engine (Hybrid ML + Rules)
+   ├── Experimentation Framework
+   ├── Data Pipeline (Real-Time Signals)
+   └── Feedback Loop System
+⚙️ Key Architectural Decisions
+1. API-First Re-Architecture
+
+Replaced XML integrations with:
+
+Self-serve APIs
+
+Standardized data contracts
+
+✅ Reduced onboarding time:
+
+6 months → 2 weeks (80% reduction)
+
+2. Microservices vs Monolith
+
+Decomposed legacy system into:
+
+Modular services
+
+Independent deployment units
+
+✅ Improved:
+
+Scalability
+
+Developer velocity
+
+3. Latency Optimization
+
+Shifted from batch → real-time inference
+
+Introduced caching + lightweight models
+
+✅ Reduced decision time by 50%
+
+4. Data Orchestration Layer
+
+Unified:
+
+Customer data
+
+Pricing signals
+
+Historical outcomes
+
+→ enabled consistent recommendations
+
+Roadmap & Prioritization
+⚖️ Prioritization Framework
+
+Used a combination of:
+
+Cost of Delay → prioritized features impacting revenue leakage
+
+RICE Framework → balanced reach (100K users), impact (conversion), effort
+
+Platform ROI Lens → prioritized reusable components over one-off features
+
+🧩 Execution Phases
+Phase 1: Trust Recovery
+
+Introduce explainability + overrides
+
+Reduce friction in adoption
+
+Phase 2: Platform Foundation
+
+API-first architecture
+
+Real-time decisioning engine
+
+Phase 3: AI Optimization
+
+Hybrid recommendation models
+
+Experimentation framework
+
+🤝 Stakeholder Alignment
+
+Resolved conflict between:
+
+Sales → control + flexibility
+
+Finance → pricing consistency + margin
+
+Key move: Designed system where:
+
+Sales could override
+
+Finance retained guardrails
+
+Launch & Execution
+🚀 Rollout Strategy
+
+Dark Launch:
+
+Ran recommendations in parallel
+
+Measured performance vs legacy system
+
+Phased Rollout:
+
+Started with low-risk deals
+
+Expanded to high-value workflows
+
+🔄 Risk Mitigation
+
+Fallback to:
+
+Rule-based pricing
+
+Continuous monitoring:
+
+Conversion rates
+
+Override frequency
+
+🔁 Feedback Loops
+
+Captured:
+
+Sales overrides
+
+Deal outcomes
+
+Customer responses
+
+→ fed into:
+
+Model retraining
+
+Experimentation cycles
+
+Impact Metrics
+📈 Business Impact
+
++21% Conversion Rate
+
++66% CSAT Improvement
+
+⚙️ System Impact
+
+50% Reduction in Decision Time
+
+Scaled to 100K+ users
+
+💰 Operational Impact
+
+80% Reduction in Onboarding Cost
+
+Enabled rapid enterprise expansion
+
+🔗 Platform Impact
+
+Adopted across:
+
+Pricing workflows
+
+Quoting systems
+
+Sales tools
+
+Established reusable:
+
+Recommendation engine
+
+Experimentation framework
+
+Lessons Learned
+1. Trust is the True Bottleneck in AI Systems
+
+High accuracy ≠ high adoption
+
+Systems must optimize for:
+
+transparency
+
+control
+
+predictability
+
+2. Platforms Outperform Features at Scale
+
+Reusable primitives (APIs, decisioning engines) created:
+
+faster iteration
+
+cross-team leverage
+
+long-term scalability
+
+3. Friction Mapping Drives PMF Expansion
+
+Biggest gains came from:
+
+removing onboarding friction
+
+reducing decision latency
+
+→ not adding features
+
+4. Technical Debt = Growth Constraint
+
+Legacy XML + batch systems:
+
+slowed onboarding
+
+blocked scalability
+
+Re-architecture unlocked exponential growth potential
+
+5. Influence Without Authority is a Force Multiplier
+
+Success required aligning:
+
+Sales
+
+Finance
+
+Engineering
+
+→ through shared incentives, not mandates
+
+💡 Final Takeaway
+
+This was not a pricing improvement—it was a decisioning system transformation:
+
+From batch → real-time
+
+From low-trust → explainable AI
+
+From manual workflows → intelligent systems
+
+Built not just a recommendation engine—but a scalable decision infrastructure for the business
