@@ -71,9 +71,9 @@ const cards = [
   },
   {
     icon: Clock,
-    metric: "2× Faster",
+    metric: "~2× Faster",
     title: "Execution Velocity",
-    description: "Reduced enterprise launch cycles from 18 → 9 months through streamlined delivery.",
+    description: "Reduced enterprise launch cycles from 18 → 10 months through streamlined delivery.",
     accent: true,
   },
 ]
